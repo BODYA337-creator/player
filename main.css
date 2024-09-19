@@ -2,6 +2,10 @@
     --size: 200px;
 }
 
+body {
+    height: 100wh;
+}
+
 .front-face {
     width: var(--size);
     height: var(--size);
