@@ -11,7 +11,7 @@ playButton.onclick = function () {
         playButton.children[0].setAttribute('src', 'pause.svg');
         document.querySelector('.disk').style.transform = 'translateX(160px)';
         playButton.children[0].style.marginLeft = '0px';
-        document.querySelector('.disk').style.animation = "rotate 1s linear infinite";
+        document.querySelector('.disk').style.animation = "rotate 1.5s linear infinite";
     } else {
         audio.pause();
         playButton.children[0].setAttribute('src', 'play.svg');
