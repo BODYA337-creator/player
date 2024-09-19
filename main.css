@@ -27,7 +27,7 @@
 
 .controls {
     position: fixed;
-    bottom: 1.5%;
+    bottom: 0;
 }
 
 /* .disk-box:hover .disk {
