@@ -1,0 +1,69 @@
+:root {
+    --size: 200px;
+}
+
+.front-face {
+    width: var(--size);
+    height: var(--size);
+    z-index: 1;
+    border: 3px solid black;
+}
+
+.disk {
+    width: var(--size);
+    height: var(--size);
+    z-index: -1;
+    position: absolute;
+    left: 0%;
+    transition: all ease-in-out .6s;
+}
+
+.container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls {
+    position: fixed;
+    bottom: 1.5%;
+}
+
+/* .disk-box:hover .disk {
+    left: 40%;
+    animation: rotate linear 1s infinite;
+} */
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.disk-box {
+    display: flex;
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+}
+
+.play-button img {
+    margin-left: 6.5px;
+    width: 35px;
+    height: 35px;
+}
+
+.play-button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(8, 8, 147);
+}
