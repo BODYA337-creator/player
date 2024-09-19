@@ -9,7 +9,7 @@ playButton.onclick = function () {
     if (buttonState) {
         audio.play();
         playButton.children[0].setAttribute('src', 'pause.svg');
-        document.querySelector('.disk').style.transform = 'translate(160px)';
+        document.querySelector('.disk').style.transform = 'translateX(160px)';
         playButton.children[0].style.marginLeft = '0px';
         document.querySelector('.disk').style.animation = "rotate 1s linear infinite";
     } else {
