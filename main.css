@@ -4,7 +4,7 @@
 
 body {
     height: 100wh;
-    background-color: rgb(1, 1, 80);
+    background-color: rgb(6 6 212);
 }
 
 .front-face {
@@ -70,5 +70,6 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: rgb(8, 8, 147);
+    background-color: rgb(59 59 194);
+    border: solid black 1px;
 }
