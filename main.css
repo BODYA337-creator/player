@@ -31,6 +31,7 @@ body {
 .controls {
     position: fixed;
     bottom: 1.5%;
+    gap: 0px 7px 0px;
 }
 
 /* .disk-box:hover .disk {
