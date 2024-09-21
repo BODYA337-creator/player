@@ -36,6 +36,7 @@ playButton.addEventListener('mouseout', function () {
 });
 
 stopButton.addEventListener('click', function () {
+    playButton.children[0].setAttribute('src', 'play.svg');
     document.querySelector('.disk').style.left = '0%';
     document.querySelector('.disk').style.animation = "";
     audio.pause();
