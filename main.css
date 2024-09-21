@@ -26,8 +26,7 @@ body {
 .container {
     width: 100vw;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    place-content: center;
 }
 
 .controls {
@@ -65,8 +64,7 @@ body {
 .play-button {
     cursor: pointer;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    place-content: center;
     width: 60px;
     height: 60px;
     border-radius: 50%;
