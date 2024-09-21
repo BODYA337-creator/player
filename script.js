@@ -1,5 +1,7 @@
 const audio = new Audio('Mr. President - Coco Jambo.mp3');
 
+const stopButton = document.querySelector(".stop-button");
+
 const playButton = document.querySelector(".play-button");
 
 let buttonState = false;
@@ -31,4 +33,11 @@ playButton.addEventListener('mouseout', function () {
     if (buttonState == false) {
         document.querySelector('.disk').style.left = '0%';
     }
+});
+
+stopButton.addEventListener('click', function () {
+    document.querySelector('.disk').style.left = '0%';
+    document.querySelector('.disk').style.animation = "";
+    audio.pause();
+    audio.currentTime = '0.0';
 });
