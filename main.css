@@ -48,7 +48,7 @@ body {
     }
 }
 
-@media (min-width: 1000px) and (min-height: 650px) {
+@media screen and (min-width: 1000px) and (min-height: 650px) {
     :root {
         --size: 400px;
     }
