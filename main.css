@@ -2,6 +2,12 @@
     --size: 200px;
 }
 
+@media screen and (min-width: 1000px) and (min-height: 650px) {
+    :root {
+        --size: 600px;
+    }
+}
+
 body {
     height: 100wh;
 }
@@ -45,12 +51,6 @@ body {
     }
     to {
         transform: rotate(360deg);
-    }
-}
-
-@media screen and (min-width: 1000px) and (min-height: 650px) {
-    :root {
-        --size: 600px;
     }
 }
 
