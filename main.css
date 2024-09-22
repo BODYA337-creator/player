@@ -1,10 +1,14 @@
 :root {
     --size: 200px;
+    --buttons-size: 60px;
+    --buttons-img-size: 35px;
 }
 
-@media screen and (min-width: 800px) and (min-height: 600px) {
+@media screen and (min-width: 900px) and (min-height: 600px) {
     :root {
-        --size: 600px;
+        --size: 350px;
+        --buttons-size: 120px;
+        --buttons-img-size: 70px;
     }
 }
 
@@ -25,7 +29,7 @@ body {
     z-index: -1;
     position: absolute;
     left: 0%;
-    transition: all ease-in-out .6s;
+    transition: left ease-in-out .6s;
 }
 
 .container {
@@ -63,14 +67,14 @@ body {
 
 .play-button img {
     margin-left: 6.5px;
-    width: 35px;
-    height: 35px;
+    width: var(--buttons-img-size);
+    height: var(--buttons-img-size);
 }
 
 .stop-button img {
-    margin-left: 0.5px;
-    width: 35px;
-    height: 35px;
+    margin-left: 1px;
+    width: var(--buttons-img-size);
+    height: var(--buttons-img-size);
 }
 
 .play-button {
@@ -78,8 +82,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 60px;
+    width: var(--buttons-size);
+    height: var(--buttons-size);
     border-radius: 50%;
     background-color: rgb(59 59 194);
     border: solid black 1px;
@@ -90,8 +94,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 60px;
+    width: var(--buttons-size);
+    height: var(--buttons-size);
     border-radius: 50%;
     background-color: rgb(59 59 194);
     border: solid black 1px;
