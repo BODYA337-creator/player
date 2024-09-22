@@ -4,7 +4,7 @@
     --buttons-img-size: 35px;
 }
 
-@media screen and (min-width: 900px) and (min-height: 600px) {
+@media screen and (min-width: 800px) and (min-height: 600px) {
     :root {
         --size: 350px;
         --buttons-size: 120px;
