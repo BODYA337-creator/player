@@ -50,7 +50,7 @@ body {
 
 @media screen and (min-width: 1000px) and (min-height: 650px) {
     :root {
-        --size: 400px;
+        --size: 600px;
     }
 }
 
