@@ -29,7 +29,7 @@ body {
     z-index: -1;
     position: absolute;
     left: 0%;
-    transition: left ease-in-out .6s;
+    transition: left cubic-bezier(0, 0.38, 0.35, 1) 1s;
 }
 
 .container {
