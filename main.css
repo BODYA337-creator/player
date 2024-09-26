@@ -10,15 +10,22 @@
 
 @media screen and (min-width: 700px) and (min-height: 600px) {
     :root {
-        --size: 350px;
-        --buttons-size: 120px;
-        --buttons-img-size: 70px;
+        --size: 400px;
+        --buttons-size: 140px;
+        --buttons-img-size: 80px;
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .controls {
+        width: 1000px;
     }
 }
 
 body {
     height: 100vh;
     width: 100vw;
+    background-color: rgb(0, 0, 100);
 }
 
 .front-face {
@@ -44,14 +51,21 @@ body {
 }
 
 .container {
-    width: 100vw;
     display: flex;
     place-content: center;
 }
 
+.disk-container {
+    width: 100vw;
+}
+
 .controls {
+    width: 100vw;
     position: fixed;
-    bottom: 1.5%;
+    bottom: 0%;
+    padding: 0.5%;
+    border-top: solid rgb(54, 54, 54) 7px;
+    background: linear-gradient(90deg, rgba(102,102,102,1) 0%, rgba(100,100,100,1) 50%, rgba(97,97,97,1) 100%);
 }
 
 @keyframes rotate {
@@ -78,6 +92,10 @@ body {
 
 #play-button img {
     margin-left: 6.5px;
+}
+
+#stop-button {
+    margin-left: 8px;
 }
 
 #stop-button img {
