@@ -1,10 +1,14 @@
+* {
+    margin: 0;
+}
+
 :root {
     --size: 200px;
     --buttons-size: 60px;
     --buttons-img-size: 35px;
 }
 
-@media screen and (min-width: 800px) and (min-height: 600px) {
+@media screen and (min-width: 700px) and (min-height: 600px) {
     :root {
         --size: 350px;
         --buttons-size: 120px;
@@ -13,7 +17,8 @@
 }
 
 body {
-    height: 100wh;
+    height: 100vh;
+    width: 100vw;
 }
 
 .front-face {
@@ -29,7 +34,13 @@ body {
     z-index: -1;
     position: absolute;
     left: 0%;
+    animation: none;
     transition: left cubic-bezier(0, 0.45, 0.35, 1) 1s;
+}
+
+.disk-active {
+    left: 40%;
+    animation: rotate 1.5s linear infinite;
 }
 
 .container {
@@ -41,13 +52,7 @@ body {
 .controls {
     position: fixed;
     bottom: 1.5%;
-    gap: 0px 7px 0px;
 }
-
-/* .disk-box:hover .disk {
-    left: 40%;
-    animation: rotate linear 1s infinite;
-} */
 
 @keyframes rotate {
     from {
@@ -65,31 +70,21 @@ body {
     height: var(--size);
 }
 
-.play-button img {
+.controll-button img {
+    width: var(--buttons-img-size);
+    height: var(--buttons-img-size);
+    pointer-events: none;
+}
+
+#play-button img {
     margin-left: 6.5px;
-    width: var(--buttons-img-size);
-    height: var(--buttons-img-size);
 }
 
-.stop-button img {
+#stop-button img {
     margin-left: 1px;
-    width: var(--buttons-img-size);
-    height: var(--buttons-img-size);
 }
 
-.play-button {
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: var(--buttons-size);
-    height: var(--buttons-size);
-    border-radius: 50%;
-    background-color: rgb(59 59 194);
-    border: solid black 1px;
-}
-
-.stop-button {
+.controll-button {
     cursor: pointer;
     display: flex;
     justify-content: center;
