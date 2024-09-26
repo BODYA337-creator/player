@@ -1,27 +1,33 @@
 const audio = new Audio('Mr. President - Coco Jambo.mp3');
 
-const stopButton = document.querySelector(".stop-button");
+const disk = document.querySelector('.disk');
 
-const playButton = document.querySelector(".play-button");
+const stopButton = document.querySelector("#stop-button");
+
+const playButton = document.querySelector("#play-button");
 
 let buttonState = false;
 
-playButton.onclick = function () {
+function playAudio() {
     buttonState = !buttonState;
     if (buttonState) {
         audio.play();
         playButton.children[0].setAttribute('src', 'pause.svg');
-        document.querySelector('.disk').style.left = '40%';
         playButton.children[0].style.marginLeft = '0px';
-        document.querySelector('.disk').style.animation = "rotate 1.5s linear infinite";
+        document.querySelector('.disk').style.left = '40%';
+        disk.classList.add("disk-active");
     } else {
         audio.pause();
         playButton.children[0].setAttribute('src', 'play.svg');
         playButton.children[0].style.marginLeft = '6.5px';
+        disk.classList.remove("disk-active");
         document.querySelector('.disk').style.left = '0%';
-        document.querySelector('.disk').style.animation = "";
     }
-};
+}
+
+playButton.addEventListener('click', function () {
+    playAudio();
+});
 
 playButton.addEventListener('mouseover', function () {
     if (buttonState == false) {
@@ -40,7 +46,13 @@ stopButton.addEventListener('click', function () {
     buttonState = false;
     playButton.children[0].setAttribute('src', 'play.svg');
     document.querySelector('.disk').style.left = '0%';
-    document.querySelector('.disk').style.animation = "";
+    disk.classList.remove("disk-active");
     audio.pause();
     audio.currentTime = '0.0';
+});
+
+document.addEventListener('keydown', function(event) {
+    if (event.code === 'Space') {
+      playAudio();
+    }
 });
