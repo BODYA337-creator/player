@@ -8,6 +8,11 @@
     --buttons-img-size: 35px;
 }
 
+main {
+    position: relative;
+    overflow: hidden;
+}
+
 @media screen and (min-width: 700px) and (min-height: 600px) {
     :root {
         --size: 400px;
