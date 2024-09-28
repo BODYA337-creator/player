@@ -1,0 +1,28 @@
+.song-item img {
+    width: 130px;
+    height: 130px;
+}
+
+.song-item div {
+    color: black;
+    font-weight: bold;
+    font-size: x-large;
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    margin: 0 0 5px 7px;
+}
+
+.song-item a {
+    text-decoration: none;
+    display: flex;
+}
+
+.songs-items {
+    background-color: lightgray;
+    width: 270px;
+    padding: 0.5%;
+    height: 100vh;
+    border-right: solid rgb(54, 54, 54) 5px;
+}
