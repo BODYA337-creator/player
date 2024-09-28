@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+}
+
+:root {
+    --size: 200px;
+    --buttons-size: 90px;
+    --buttons-img-size: 50px;
+}
+
+main {
+    position: relative;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 700px) and (min-height: 600px) {
+    :root {
+        --size: 400px;
+        --buttons-size: 140px;
+        --buttons-img-size: 80px;
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .controls {
+        width: 1000px;
+    }
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(0, 0, 100);
+}
+
+.front-face {
+    width: var(--size);
+    height: var(--size);
+    z-index: 1;
+    border: 3px solid black;
+}
+
+.disk {
+    width: var(--size);
+    height: var(--size);
+    z-index: -1;
+    position: absolute;
+    left: 0%;
+    animation: none;
+    transition: left cubic-bezier(0, 0.45, 0.35, 1) 1s;
+}
+
+.disk-active {
+    left: 40%;
+    animation: rotate 1.5s linear infinite;
+}
+
+.container {
+    display: flex;
+    place-content: center;
+}
+
+.disk-container {
+    width: 100vw;
+}
+
+.controls {
+    width: 100vw;
+    position: fixed;
+    bottom: 0%;
+    padding: 0.5%;
+    border-top: solid rgb(54, 54, 54) 7px;
+    background: linear-gradient(90deg, rgba(102,102,102,1) 0%, rgba(100,100,100,1) 50%, rgba(97,97,97,1) 100%);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.disk-box {
+    display: flex;
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+}
+
+.controll-button img {
+    width: var(--buttons-img-size);
+    height: var(--buttons-img-size);
+    pointer-events: none;
+}
+
+#play-button img {
+    margin-left: 6.5px;
+}
+
+#stop-button {
+    margin-left: 8px;
+}
+
+#stop-button img {
+    margin-left: 1px;
+}
+
+.controll-button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--buttons-size);
+    height: var(--buttons-size);
+    border-radius: 50%;
+    background-color: rgb(59 59 194);
+    border: solid black 1px;
+}
+
